@@ -191,6 +191,10 @@ header.hidden {
     position: relative;
   }
 
+  .header_nav_list::after {
+    background-color: #FFFFFF;
+  }
+
   .header_form_sp{
     display: flex;
     background-color: #FFFFFF;
