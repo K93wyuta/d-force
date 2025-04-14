@@ -1,7 +1,7 @@
 // ヘッダーを挿入する関数
 function loadHeader() {
   // 'header.html'を取得
-  fetch('common/header.html')
+  fetch('../common/header.html')
     // レスポンスをテキストとして取得
     .then(response => response.text())
 
@@ -59,7 +59,7 @@ function loadHeader() {
 // フッターを挿入する関数
 function loadFooter() {
   // 'footer.html'を取得
-  fetch('common/footer.html')
+  fetch('../common/footer.html')
     // レスポンスをテキストとして取得
     .then(response => response.text())
 
