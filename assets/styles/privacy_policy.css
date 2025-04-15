@@ -1,0 +1,55 @@
+/*---------------------------------
+  Contents
+---------------------------------*/
+.page_contents_element{
+  margin: 0 40px;
+}
+
+.page_contents_element_block{
+  margin-bottom: 80px;
+}
+
+.page_contents_element_block_title{
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.page_contents_element_block_description{
+  font-size: 1.2rem;
+  line-height: 3;
+  margin-bottom: 40px;
+}
+
+.page_contents_element_block_meta{
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+
+@media (max-width: 768px) {
+  .page_contents_element{
+    margin: 0 20px;
+  }
+  
+  .page_contents_element_block{
+    margin-bottom: 40px;
+  }
+  
+  .page_contents_element_block_title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .page_contents_element_block_description{
+    font-size: 1.0rem;
+    line-height: 2;
+    margin-bottom: 20px;
+  }
+  
+  .page_contents_element_block_meta{
+    font-size: 1.0rem;
+    text-align: right;
+  }
+}
