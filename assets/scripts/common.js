@@ -1,13 +1,21 @@
-// ファイル階層をカウント
-const pathDepth = location.pathname.replace(/\/$/, '')
-  .split('/')
-  .filter(segment => segment && !segment.includes('.html'))
-  .length - 1;
+let pathDepth;
 
-// 最低値は 0 にする
+if (location.protocol === 'file:') {
+  // ローカル環境：file:// のとき
+  const localPath = location.pathname.replace(/\\/g, '/'); // Windows対策
+  const parts = localPath.split('/');
+  // プロジェクトルートを "common" の1つ上の階層とみなす
+  const index = parts.lastIndexOf('common');
+  pathDepth = index > 0 ? parts.length - index - 2 : parts.length - 2;
+} else {
+  // サーバーやGitHub Pages上
+  pathDepth = location.pathname.replace(/\/$/, '')
+    .split('/')
+    .filter(segment => segment && !segment.includes('.html'))
+    .length - 1;
+}
+
 const safeDepth = Math.max(0, pathDepth);
-
-// ベースパスを生成
 const basePath = '../'.repeat(safeDepth);
 
 // ヘッダーを挿入する関数
