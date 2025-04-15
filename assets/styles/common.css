@@ -520,57 +520,53 @@ footer{
   font-size: 2.4rem;
 }
 
-.main{
-
-}
-
-.contents:not(:last-child){
+.page_contents:not(:last-child){
   margin: 0 40px 160px 40px;
 }
 
-.contents:last-child {
+.page_contents:last-child {
   margin: 0 40px 320px 40px;
 }
 
-.contents_header{
+.page_contents_header{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 20px 20px 20px;
 }
 
-.contents_header_title{
+.page_contents_header_title{
   display: flex;
   align-items: end;
 }
 
-.contents_header_title_en{
+.page_contents_header_title_en{
   font-family: 'Montserrat', sans-serif;
   font-size: 4rem;
   margin-right: 20px;
 }
 
-.contents_header_title_jp{
+.page_contents_header_title_jp{
   font-size: 1.6rem;
 }
 
-.contents_header_nav{
+.page_contents_header_nav{
   display: flex;
 }
 
-.contents_header_nav a{
+.page_contents_header_nav a{
   color: #434343;
   text-decoration: none;
 }
 
-.contents_header_nav_first{
+.page_contents_header_nav_first{
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   margin-right: 20px;
   position: relative;
 }
 
-.contents_header_nav_first::after {
+.page_contents_header_nav_first::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -582,17 +578,17 @@ footer{
   transition: width 0.3s ease;
 }
 
-.contents_header_nav_first:hover::after {
+.page_contents_header_nav_first:hover::after {
   width: 100%;
 }
 
-.contents_header_nav_second{
+.page_contents_header_nav_second{
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   position: relative;
 }
 
-.contents_header_nav_second::after {
+.page_contents_header_nav_second::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -604,11 +600,11 @@ footer{
   transition: width 0.3s ease;
 }
 
-.contents_header_nav_second:hover::after {
+.page_contents_header_nav_second:hover::after {
   width: 100%;
 }
 
-.contents_line{
+.page_contents_line{
     width: 100%;
     height: 1px;
     background-color: #000000;
@@ -634,41 +630,41 @@ footer{
   
   }
   
-  .contents:not(:last-child){
+  .page_contents:not(:last-child){
     margin: 0 20px 80px 20px;
   }
   
-  .contents:last-child {
+  .page_contents:last-child {
     margin: 0 20px 160px 20px;
   }
   
-  .contents_header{
+  .page_contents_header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 10px 10px 10px;
   }
   
-  .contents_header_title{
+  .page_contents_header_title{
     display: flex;
     align-items: end;
   }
   
-  .contents_header_title_en{
+  .page_contents_header_title_en{
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     margin-right: 10px;
   }
   
-  .contents_header_title_jp{
+  .page_contents_header_title_jp{
     font-size: 1.2rem;
   }
   
-  .contents_header_nav{
+  .page_contents_header_nav{
     display: none;
   }
   
-  .contents_line{
+  .page_contents_line{
       margin-bottom: 40px;
   }
 }

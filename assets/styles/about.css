@@ -1,61 +1,61 @@
 /*---------------------------------
   Contents
 ---------------------------------*/
-.contents_element{
+.page_contents_element{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 40px;
 }
 
-.contents_element_left img{
+.page_contents_element_left img{
   width: 500px;
 }
 
-.contents_element_right{
+.page_contents_element_right{
   width: 50%;
 }
 
-.contents_element_right_text:not(:last-child){
+.page_contents_element_right_text:not(:last-child){
   margin-bottom: 80px;
 }
 
-.contents_element_right_text_en{
+.page_contents_element_right_text_en{
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   margin-bottom: 20px;
   color: #2AA0DB;
 }
 
-.contents_element_right_text_jp{
+.page_contents_element_right_text_jp{
   font-size: 2.4rem;
 }
 
 @media (max-width: 768px) {
-  .contents_element{
+  .page_contents_element{
     flex-direction: column;
     margin: 0 40px;
   }
 
-  .contents_element_left img{
+  .page_contents_element_left img{
     width: 250px;
     margin-bottom: 40px;
   }
 
-  .contents_element_right{
+  .page_contents_element_right{
     width: 100%;
   }
   
-  .contents_element_right_text:not(:last-child){
+  .page_contents_element_right_text:not(:last-child){
     margin-bottom: 40px;
   }
   
-  .contents_element_right_text_en{
+  .page_contents_element_right_text_en{
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
   
-  .contents_element_right_text_jp{
+  .page_contents_element_right_text_jp{
     font-size: 1.4rem;
   }
 }

@@ -1,14 +1,36 @@
+// ディレクトリ階層をカウント
+const pathDepth = location.pathname
+  .split('/')
+  .filter(segment => segment && !segment.includes('.html'))
+  .length;
+
+// ベースパスの作成
+const basePath = '../'.repeat(pathDepth);
+
 // ヘッダーを挿入する関数
 function loadHeader() {
   // 'header.html'を取得
-  fetch('../common/header.html')
-    // レスポンスをテキストとして取得
+  fetch(`${basePath}common/header.html`)
     .then(response => response.text())
-
-    // 取得したHTMLデータを<header>タグに挿入
     .then(data => {
       const headerElement = document.querySelector('header');
       headerElement.innerHTML = data;
+
+      // ▼ src/href のパスを補正（画像・リンク用）
+      headerElement.querySelectorAll('[src], [href]').forEach(el => {
+        if (el.hasAttribute('src')) {
+          const src = el.getAttribute('src');
+          if (!src.startsWith('http') && !src.startsWith('/') && !src.startsWith(basePath)) {
+            el.setAttribute('src', basePath + src);
+          }
+        }
+        if (el.hasAttribute('href')) {
+          const href = el.getAttribute('href');
+          if (!href.startsWith('http') && !href.startsWith('/') && !href.startsWith(basePath)) {
+            el.setAttribute('href', basePath + href);
+          }
+        }
+      });
 
       // ヘッダー表示/非表示の処理（スクロールによる制御）
       let lastScrollY = window.scrollY;
@@ -25,50 +47,49 @@ function loadHeader() {
       // ハンバーガーメニューの開閉処理
       const toggle = document.querySelector('.header_nav_toggle');
       const spNav = document.querySelector('.header_nav');
-      const closeBtn = document.querySelector('.header_nav_close'); // 閉じるボタン
+      const closeBtn = document.querySelector('.header_nav_close');
 
-      // ハンバーガーメニューを開閉
       if (toggle && spNav) {
         toggle.addEventListener('click', () => {
           spNav.classList.toggle('active');
-
-          // メニューが開いている間はスクロールを無効にする
-          if (spNav.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
-          } else {
-            document.body.style.overflow = '';
-          }
+          document.body.style.overflow = spNav.classList.contains('active') ? 'hidden' : '';
         });
       }
 
-      // メニューを閉じる処理
       if (closeBtn) {
         closeBtn.addEventListener('click', () => {
-          spNav.classList.remove('active'); // メニューを非表示にする
-
-          // スクロールを再び有効にする
+          spNav.classList.remove('active');
           document.body.style.overflow = '';
         });
       }
     })
-
-    // エラーが発生した場合に、コンソールにエラーメッセージを表示
     .catch(error => console.error('Error loading header:', error));
 }
 
 // フッターを挿入する関数
 function loadFooter() {
-  // 'footer.html'を取得
-  fetch('../common/footer.html')
-    // レスポンスをテキストとして取得
+  fetch(`${basePath}common/footer.html`)
     .then(response => response.text())
-
-    // 取得したHTMLデータを<footer>タグに挿入
     .then(data => {
-      document.querySelector('footer').innerHTML = data;
-    })
+      const footerElement = document.querySelector('footer');
+      footerElement.innerHTML = data;
 
-    // エラーが発生した場合に、コンソールにエラーメッセージを表示
+      // フッター内の src/href も補正
+      footerElement.querySelectorAll('[src], [href]').forEach(el => {
+        if (el.hasAttribute('src')) {
+          const src = el.getAttribute('src');
+          if (!src.startsWith('http') && !src.startsWith('/') && !src.startsWith(basePath)) {
+            el.setAttribute('src', basePath + src);
+          }
+        }
+        if (el.hasAttribute('href')) {
+          const href = el.getAttribute('href');
+          if (!href.startsWith('http') && !href.startsWith('/') && !href.startsWith(basePath)) {
+            el.setAttribute('href', basePath + href);
+          }
+        }
+      });
+    })
     .catch(error => console.error('Error loading footer:', error));
 }
 
