@@ -1,11 +1,14 @@
-// ディレクトリ階層をカウント
-const pathDepth = location.pathname
+// ファイル階層をカウント
+const pathDepth = location.pathname.replace(/\/$/, '')
   .split('/')
   .filter(segment => segment && !segment.includes('.html'))
-  .length;
+  .length - 1;
 
-// ベースパスの作成
-const basePath = '../'.repeat(pathDepth);
+// 最低値は 0 にする
+const safeDepth = Math.max(0, pathDepth);
+
+// ベースパスを生成
+const basePath = '../'.repeat(safeDepth);
 
 // ヘッダーを挿入する関数
 function loadHeader() {
