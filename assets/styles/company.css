@@ -41,7 +41,7 @@
 }
 
 .page_contents_element_info{
-  margin-left: 40%;
+  margin: 0 40px 0 40%;
 }
 
 .page_contents_element_info_list{
@@ -70,7 +70,7 @@
 @media (max-width: 768px) {
   .page_contents_element{
     flex-direction: column;
-    margin: 0 40px;
+    margin: 0 20px;
   }
 
   .page_contents_element_left{
@@ -100,7 +100,7 @@
   }
   
   .page_contents_element_info{
-    margin-left: 0;
+    margin: 0 20px;
   }
   
   .page_contents_element_info_list{
