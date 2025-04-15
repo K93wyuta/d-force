@@ -45,18 +45,18 @@
 }
 
 .page_contents_element_info_list{
-  height: 60px;
+  margin: 20px;
   display: flex;
   align-items: center;
 }
 
 .page_contents_element_info_list_left{
   width: 40%;
-  margin-left: 20px;
   font-size: 1.6rem;
 }
 
 .page_contents_element_info_list_right{
+  line-height: 2;
   font-size: 1.6rem;
   font-weight: bold;
 }
@@ -104,18 +104,16 @@
   }
   
   .page_contents_element_info_list{
-
+    margin: 10px;
   }
   
   .page_contents_element_info_list_left{
     width: 36%;
-    margin-left: 10px;
     font-size: 1.2rem;
   }
   
   .page_contents_element_info_list_right{
     font-size: 1.2rem;
-    margin-right: 10px;
   }
   
   .page_contents_element_info_list_line{
