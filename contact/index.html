@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!---- Basic Start ---->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ｜＜公式＞合同会社D-force</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <!---- Basic End ---->
+
+  <!---- OGP Start ---->
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="https://dforce-inc.com/og-image.jpg">
+  <meta property="og:url" content="https://dforce-inc.com/">
+  <meta property="og:type" content="website">
+  <!---- OGP End ---->
+
+  <!---- Favicon Start ---->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <!---- Favicon End ---->
+
+  <!---- CSS Start ---->
+  <link rel="stylesheet" href="../assets/styles/reset.css">
+  <link rel="stylesheet" href="../assets/styles/common.css">
+  <link rel="stylesheet" href="../assets/styles/contact.css">
+  <!---- CSS End ---->
+
+  <!---- JavaScript Start ---->
+  <script defer src="../assets/scripts/common.js"></script>
+  <script defer src="../assets/scripts/contact.js"></script>
+  <!---- JavaScript End ---->
+
+  <!---- Font Start ---->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!---- Font End ---->
+</head>
+<body>
+  <!---- Main Start ---->
+  <main>
+    <!---- Title Start ---->
+    <section class="title">
+      <div class="title_en">Contact</div>
+      <div class="title_jp">お問い合わせ</div>
+    </section>
+    <!---- Title End ---->
+    <!---- Main Start ---->
+    <div class="main">
+      <!---- Form Start ---->
+      <form action="https://formsubmit.co/k93wyuta@gmail.com" method="POST" class="form" id="form">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="http://localhost:8000/thanks/index.html">
+        <input type="hidden" name="category" value="問い合わせ">
+        <div class="form_element">
+          <div class="form_element_field">
+            <div class="form_element_field_required">必須</div>
+            <label for="name" class="form_element_field_label">お名前</label>
+          </div>
+          <input type="text" name="name" id="name" placeholder="田中 太郎" class="form_element_input" required>
+        </div>
+        <div class="form_element">
+          <div class="form_element_field">
+            <div class="form_element_field_required">必須</div>
+            <label for="email" class="form_element_field_label">メールアドレス</label>
+          </div>
+          <input type="email" name="email" id="email" placeholder="example@example.com" class="form_element_input" required>
+        </div>
+        <div class="form_element">
+          <div class="form_element_field">
+            <div class="form_element_field_required">必須</div>
+            <label for="phone" class="form_element_field_label">電話番号</label>
+          </div>
+          <input type="text" name="phone" id="phone" placeholder="00000000000" class="form_element_input" required>
+        </div>
+        <div class="form_element">
+          <div class="form_element_field">
+            <div class="form_element_field_optional">任意</div>
+            <label for="message" class="form_element_field_label">お問い合わせ内容</label>
+          </div>
+          <textarea id="message" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください" class="form_element_textarea"></textarea>
+        </div>
+        <div class="form_privacy_policy_link">
+          <a href="../privacy_policy/index.html" target="_blank" rel="noopener noreferrer">＞　個人情報の取扱いについて</a>
+        </div>
+        <button type="submit" class="form_button">送信する</button>
+      </form>
+      <!---- Form End ---->
+    </div>
+    <!---- Main End ---->
+  </main>
+  <!---- Main End ---->
+
+  <!---- Footer Start ---->
+  <footer></footer>
+  <!----　Footer End ---->
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+/*---------------------------------
+  Contents
+---------------------------------*/
+.page_contents_thanks{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_contents_title{
+  margin-bottom: 80px;
+}
+
+.page_contents_title_en{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 6.4rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.page_contents_title_jp{
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+.page_contents_message{
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.page_contents_home{
+  background: linear-gradient(to right, #2AA0DB, #013D90);
+  width: 200px;
+  height: 60px;
+  border-radius: 100px;
+  border: none;
+  z-index: 1;
+  transition: all .3s;
+  font-size: 1.2rem;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_contents_home:hover {
+  transform: scale(1.1,1.1);
+}
+
+.page_contents_home_link{
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .page_contents_thanks{
+
+  }
+  
+  .page_contents_title{
+    margin-bottom: 40px;
+  }
+  
+  .page_contents_title_en{
+    font-size: 5rem;
+    margin-bottom: 10px;
+  }
+  
+  .page_contents_title_jp{
+    font-size: 1.6rem;
+  }
+  
+  .page_contents_message{
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .page_contents_home{
+
+  }
+  
+  .page_contents_home_link{
+
+  }
+}
