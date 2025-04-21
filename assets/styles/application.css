@@ -190,6 +190,7 @@
   .form_element_input_date,
   .form_element_input_select,
   .form_element_textarea {
+    appearance: none;
     font-size: 1.2rem;
     width: 100%;
     padding: 10px 14px;
