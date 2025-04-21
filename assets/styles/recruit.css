@@ -10,6 +10,7 @@
   margin: 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .page_contents_element_list_left{
@@ -18,6 +19,7 @@
 }
 
 .page_contents_element_list_right{
+  width: 60%;
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 2;

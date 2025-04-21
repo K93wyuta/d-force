@@ -48,6 +48,7 @@
   margin: 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .page_contents_element_info_list_left{
@@ -56,6 +57,7 @@
 }
 
 .page_contents_element_info_list_right{
+  width: 60%;
   line-height: 2;
   font-size: 1.6rem;
   font-weight: bold;
