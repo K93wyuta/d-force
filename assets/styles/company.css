@@ -61,6 +61,12 @@
   font-weight: bold;
 }
 
+.page_contents_element_info_list_right a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;
+}
+
 .page_contents_element_info_list_line{
   width: 100%;
   height: 1px;
