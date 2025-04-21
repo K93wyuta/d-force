@@ -263,11 +263,11 @@
 .contents_element{
   display: flex;
   align-items: center;
+  height: 60vh;
 }
 
 .contents_element_image{
-  width: 600px;
-  height: 400px;
+  width: 40vw;
   overflow: hidden;
   margin-right: 80px;
 }
@@ -292,8 +292,8 @@
 }
 
 .contents_element_lists{
-  width: calc(100% - 680px);
-  height: 400px;
+  width: calc(100vw - 40vw - 80px);
+  height: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
